@@ -1,5 +1,5 @@
 # Xoublet
-快速开始
+
 import scanpy as sc
 from xoublet import Xoublet
 
@@ -17,8 +17,6 @@ xb = Xoublet(
     expected_doublet_rate=0.08
 )
 
-# 结果将自动保存至 adata.obs['doublet_score']
 xb.run(adata)
-
 
 sc.pl.embedding(adata, basis='umap', color='doublet_score')
